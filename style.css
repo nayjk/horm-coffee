@@ -1,0 +1,756 @@
+
+/* ОСНОВНЫЕ НАСТРОЙКИ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #e8dfd2;
+    color: #49372c;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+}
+
+.subtitle {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #a58a70;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    text-align: center;
+    padding: 110px 20px 65px;
+}
+
+.section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: 500;
+}
+
+.section-text {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #927d6c;
+}
+
+
+/* БОКОВОЕ МЕНЮ */
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    background: #e8dfd2;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.menu-button span {
+    width: 19px;
+    height: 1px;
+    background: #49372c;
+    transition: 0.4s;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    background: #49372c;
+    z-index: 1001;
+    padding: 100px 45px;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.sidebar-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    color: #e8dfd2;
+    margin-bottom: 40px;
+}
+
+.sidebar a {
+    color: #e8dfd2;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #c3a98d;
+    padding-left: 10px;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 40px;
+    color: #a58a70;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+#menu-toggle:checked ~ .sidebar {
+    transform: translateX(0);
+}
+
+#menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu-toggle:checked ~ .menu-button span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ .menu-button span:nth-child(2) {
+    transform: translateY(-3.5px) rotate(-45deg);
+}
+
+
+/* ПЕРВЫЙ ЭКРАН */
+
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(30,20,15,0.35), rgba(30,20,15,0.55)),
+        url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=2000')
+        center/cover no-repeat;
+    transform: scale(1.05);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content .subtitle {
+    color: #e0cbb4;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(90px, 18vw, 200px);
+    font-weight: 400;
+    letter-spacing: 15px;
+    line-height: 1;
+}
+
+.hero-description {
+    font-size: 13px;
+    line-height: 2;
+    margin: 30px 0;
+    letter-spacing: 1px;
+}
+
+.hero-button {
+    display: inline-block;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.6);
+    padding: 16px 30px;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 3px;
+    transition: 0.4s;
+}
+
+.hero-button:hover {
+    background: #e8dfd2;
+    color: #49372c;
+}
+
+.scroll-text {
+    position: absolute;
+    bottom: 35px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    z-index: 2;
+}
+
+
+/* АТМОСФЕРА И PARALLAX */
+
+.story {
+    background: #e8dfd2;
+}
+
+.parallax {
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(35,23,15,0.3);
+}
+
+.parallax-one {
+    background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1800');
+}
+
+.parallax-two {
+    background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1800');
+}
+
+.quote {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 5vw, 55px);
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.story-description {
+    padding: 110px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.story-description span {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #a58a70;
+}
+
+.story-description h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.story-description > p {
+    max-width: 400px;
+    font-size: 13px;
+    line-height: 2.2;
+    color: #806d5d;
+}
+
+.gallery {
+    padding: 0 8% 100px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 25px;
+}
+
+.gallery-item {
+    height: 350px;
+    overflow: hidden;
+}
+
+.gallery-large {
+    grid-row: span 2;
+    height: 725px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* КОМАНДА */
+
+.team {
+    background: #d9cabb;
+    padding-bottom: 120px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 10%;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    filter: sepia(12%);
+    transition: 0.5s;
+}
+
+.team-card:hover img {
+    filter: sepia(0%);
+    transform: translateY(-8px);
+}
+
+.team-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.team-card p {
+    font-size: 10px;
+    color: #8b715d;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+
+/* МЕНЮ */
+
+.menu-section {
+    background: #eee7dc;
+    padding-bottom: 120px;
+}
+
+.menu-container {
+    max-width: 850px;
+    margin: auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.menu-category h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #c6b49f;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.menu-item h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.menu-item p {
+    font-size: 10px;
+    color: #9a8571;
+    margin-top: 7px;
+}
+
+.menu-item span {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #49372c;
+    color: #e8dfd2;
+    text-align: center;
+    padding: 90px 20px 30px;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 75px;
+    letter-spacing: 10px;
+}
+
+footer > p {
+    font-size: 11px;
+    color: #bba58e;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 60px 0;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 25px;
+    font-size: 9px;
+    color: #a58a70;
+    letter-spacing: 2px;
+}
+
+
+/* АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ */
+
+@media (max-width: 768px) {
+
+    .menu-button {
+        top: 20px;
+        left: 20px;
+    }
+
+    .sidebar {
+        width: min(300px, 85vw);
+    }
+
+    .story-description {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 70px 8%;
+    }
+
+    .story-description h2 {
+        font-size: 36px;
+    }
+
+    .parallax {
+        height: 400px;
+        background-attachment: scroll;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 0 6% 70px;
+    }
+
+    .gallery-item,
+    .gallery-large {
+        height: 350px;
+        grid-row: auto;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        padding: 0 12%;
+        gap: 50px;
+    }
+
+    .team-card img {
+        height: 420px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* =================================
+   ФОРМА ОТЗЫВА — MOCHA
+================================= */
+
+/* Затемнение фона */
+
+.review-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 25, 19, 0.75);
+    z-index: 2000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Появление формы */
+
+.review-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Само окно */
+
+.review-modal {
+    position: relative;
+    background: #e8dfd2;
+
+    width: 100%;
+    max-width: 550px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 55px 60px;
+
+    text-align: center;
+
+    transform: translateY(40px);
+    transition: transform 0.5s ease;
+
+    box-shadow: 0 20px 80px rgba(0,0,0,0.25);
+}
+
+.review-overlay.active .review-modal {
+    transform: translateY(0);
+}
+
+/* Крестик */
+
+.close-review {
+    position: absolute;
+    top: 18px;
+    right: 23px;
+
+    border: none;
+    background: none;
+
+    font-size: 35px;
+    font-weight: 300;
+
+    color: #49372c;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.close-review:hover {
+    color: #a58a70;
+    transform: rotate(90deg);
+}
+
+/* Заголовок */
+
+.review-modal h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 39px;
+    font-weight: 500;
+    color: #49372c;
+
+    margin-bottom: 15px;
+}
+
+.review-description {
+    font-size: 11px;
+    line-height: 1.9;
+    color: #8b7663;
+
+    margin-bottom: 35px;
+}
+
+/* Поля формы */
+
+.form-group {
+    text-align: left;
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #725a47;
+
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #f2ece3;
+
+    border: 1px solid #cbbb a8;
+    border: 1px solid #cbbba8;
+
+    outline: none;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+
+    color: #49372c;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #80634d;
+    background: #f8f3eb;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #b4a28e;
+    font-size: 11px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Кнопка отправки */
+
+.submit-review {
+    width: 100%;
+
+    padding: 17px;
+
+    background: #49372c;
+    color: #e8dfd2;
+
+    border: 1px solid #49372c;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.submit-review:hover {
+    background: transparent;
+    color: #49372c;
+}
+
+/* Сообщение после отправки */
+
+.form-success {
+    display: none;
+
+    color: #725a47;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+
+    margin-top: 20px;
+}
+
+/* Нижняя подпись */
+
+.modal-footer {
+    margin-top: 35px;
+
+    padding-top: 20px;
+    border-top: 1px solid #cbbb a8;
+    border-top: 1px solid #cbbba8;
+
+    color: #a58a70;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+/* Запрет прокрутки сайта при открытой форме */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Адаптация под мобильные устройства */
+
+@media (max-width: 600px) {
+
+    .review-modal {
+        padding: 50px 25px 35px;
+    }
+
+    .review-modal h2 {
+        font-size: 32px;
+    }
+
+    .review-description {
+        font-size: 10px;
+    }
+
+    .close-review {
+        top: 12px;
+        right: 17px;
+    }
+
+}

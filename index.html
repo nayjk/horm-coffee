@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIGHTHORM — Coffee House</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- БОКОВОЕ МЕНЮ -->
+
+<input type="checkbox" id="menu-toggle">
+
+<label for="menu-toggle" class="menu-button">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+
+<nav class="sidebar">
+    <div class="sidebar-logo">HORM.</div>
+
+    <a href="#home">Главная</a>
+    <a href="#story">Наша атмосфера</a>
+    <a href="#team">Наша команда</a>
+    <a href="#menu">Меню</a>
+    <a href="#contacts">Контакты</a>
+
+    <div class="sidebar-footer">
+        Coffee is always a good idea.
+    </div>
+</nav>
+
+<label for="menu-toggle" class="overlay"></label>
+
+
+<!-- ПЕРВЫЙ ЭКРАН -->
+
+<section class="hero" id="home">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-content">
+        <p class="subtitle">SPECIALTY COFFEE & SLOW LIVING</p>
+
+        <h1>HORM</h1>
+
+        <p class="hero-description">
+            Место, где время замедляется,
+            а кофе становится искусством.
+        </p>
+
+        <button type="button" class="hero-button" id="openReview">
+            оставить отзыв
+        </button>
+    </div>
+
+    <div class="scroll-text">SCROLL TO EXPLORE ↓</div>
+
+</section>
+
+
+<!-- АТМОСФЕРА -->
+
+<section class="story" id="story">
+
+    <div class="section-heading">
+        <p class="subtitle">A LITTLE MOMENT OF HAPPINESS</p>
+        <h2>Больше, чем просто кофе</h2>
+    </div>
+
+    <div class="parallax parallax-one">
+        <div class="quote">
+            "Иногда счастье — это просто
+            чашка любимого кофе."
+        </div>
+    </div>
+
+    <div class="story-description">
+        <div>
+            <span>01 / OUR PHILOSOPHY</span>
+            <h2>Создаём моменты,<br>которые хочется помнить.</h2>
+        </div>
+
+        <p>
+            HORM — это пространство уюта, вдохновения
+            и маленьких радостей. Здесь пахнет свежемолотым
+            кофе, звучит приятная музыка и всегда найдётся
+            время для себя.
+        </p>
+    </div>
+
+    <div class="gallery">
+
+        <div class="gallery-item gallery-large">
+            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1200" alt="Интерьер кофейни">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900" alt="Кофе">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=900" alt="Кофейная атмосфера">
+        </div>
+
+    </div>
+
+    <div class="parallax parallax-two">
+        <div class="quote">
+            "Life begins after coffee."
+        </div>
+    </div>
+
+</section>
+
+
+<!-- КОМАНДА -->
+
+<section class="team" id="team">
+
+    <div class="section-heading">
+        <p class="subtitle">THE PEOPLE BEHIND THE COFFEE</p>
+        <h2>Наша маленькая семья</h2>
+
+        <p class="section-text">
+            Люди, которые каждый день наполняют HORM теплом.
+        </p>
+    </div>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800" alt="Александр">
+            <h3>Александр</h3>
+            <p>Главный бариста</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800" alt="Анна">
+            <h3>Анна</h3>
+            <p>Управляющая</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800" alt="Марк">
+            <h3>Марк</h3>
+            <p>Бариста</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- МЕНЮ -->
+
+<section class="menu-section" id="menu">
+
+    <div class="section-heading">
+        <p class="subtitle">MADE WITH LOVE</p>
+        <h2>Наше меню</h2>
+        <p class="section-text">
+            Любимые вкусы, приготовленные с заботой.
+        </p>
+    </div>
+
+    <div class="menu-container">
+
+        <div class="menu-category">
+            <h3>COFFEE</h3>
+
+            <div class="menu-item">
+                <div>
+                    <h4>Espresso</h4>
+                    <p>Насыщенный классический кофе</p>
+                </div>
+                <span>3.50 €</span>
+            </div>
+
+            <div class="menu-item">
+                <div>
+                    <h4>Cappuccino</h4>
+                    <p>Эспрессо, молоко и нежная пена</p>
+                </div>
+                <span>4.50 €</span>
+            </div>
+
+            <div class="menu-item">
+                <div>
+                    <h4>Latte</h4>
+                    <p>Мягкий сливочный вкус</p>
+                </div>
+                <span>4.80 €</span>
+            </div>
+
+            <div class="menu-item">
+                <div>
+                    <h4>Flat White</h4>
+                    <p>Двойной эспрессо с молоком</p>
+                </div>
+                <span>4.70 €</span>
+            </div>
+        </div>
+
+
+        <div class="menu-category">
+            <h3>DESSERTS</h3>
+
+            <div class="menu-item">
+                <div>
+                    <h4>Cheesecake</h4>
+                    <p>Нежный сливочный чизкейк</p>
+                </div>
+                <span>6.00 €</span>
+            </div>
+
+            <div class="menu-item">
+                <div>
+                    <h4>Croissant</h4>
+                    <p>Свежий французский круассан</p>
+                </div>
+                <span>3.80 €</span>
+            </div>
+
+            <div class="menu-item">
+                <div>
+                    <h4>Chocolate Cake</h4>
+                    <p>Шоколадный десерт</p>
+                </div>
+                <span>5.50 €</span>
+            </div>
+
+            <div class="menu-item">
+                <div>
+                    <h4>Brownie</h4>
+                    <p>Брауни с насыщенным шоколадом</p>
+                </div>
+                <span>4.50 €</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- КОНТАКТЫ -->
+
+<footer id="contacts">
+
+    <div class="footer-logo">HORM.</div>
+
+    <p>Every cup tells a story.</p>
+
+    <div class="footer-info">
+        <span>MON – SUN / 08:00 – 21:00</span>
+        <span>Zurich, Switzerland</span>
+        <span>hello@HORM.coffee</span>
+    </div>
+
+    <div class="copyright">
+        © 2026 HORM COFFEE HOUSE
+    </div>
+
+</footer>
+
+
+<!-- ФОРМА ОТЗЫВА -->
+
+<div class="review-overlay" id="reviewOverlay">
+
+    <div class="review-modal">
+
+        <button class="close-review" id="closeReview" type="button">
+            &times;
+        </button>
+
+        <p class="subtitle">YOUR OPINION MATTERS</p>
+
+        <h2>Поделитесь впечатлениями</h2>
+
+        <p class="review-description">
+            Нам важно знать, что вы думаете о MOCHA.
+            Оставьте небольшой отзыв — нам будет очень приятно!
+        </p>
+
+        <form id="reviewForm">
+
+            <div class="form-group">
+                <label for="reviewName">Ваше имя</label>
+                <input
+                    type="text"
+                    id="reviewName"
+                    name="name"
+                    placeholder="Введите ваше имя"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="reviewPhone">Номер телефона</label>
+                <input
+                    type="tel"
+                    id="reviewPhone"
+                    name="phone"
+                    placeholder="+41 00 000 00 00"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="reviewText">Ваш отзыв</label>
+                <textarea
+                    id="reviewText"
+                    name="review"
+                    placeholder="Расскажите о ваших впечатлениях..."
+                    rows="5"
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="submit-review">
+                ОТПРАВИТЬ ОТЗЫВ
+            </button>
+
+            <p class="form-success" id="formSuccess">
+                Спасибо! Ваш отзыв принят ♡
+            </p>
+
+        </form>
+
+        <div class="modal-footer">
+            WITH LOVE, MOCHA COFFEE HOUSE
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const openReview = document.getElementById('openReview');
+const closeReview = document.getElementById('closeReview');
+const reviewOverlay = document.getElementById('reviewOverlay');
+const reviewForm = document.getElementById('reviewForm');
+const formSuccess = document.getElementById('formSuccess');
+
+function showReview() {
+    reviewOverlay.classList.add('active');
+    document.body.classList.add('modal-open');
+}
+
+function hideReview() {
+    reviewOverlay.classList.remove('active');
+    document.body.classList.remove('modal-open');
+}
+
+openReview.addEventListener('click', showReview);
+
+closeReview.addEventListener('click', hideReview);
+
+// Закрытие при нажатии на затемнённую область
+
+reviewOverlay.addEventListener('click', function(event) {
+    if (event.target === reviewOverlay) {
+        hideReview();
+    }
+});
+
+// Закрытие клавишей Escape
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        hideReview();
+    }
+});
+
+// Обработка отправки формы
+
+reviewForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    formSuccess.style.display = 'block';
+    reviewForm.reset();
+
+    setTimeout(function() {
+        hideReview();
+        formSuccess.style.display = 'none';
+    }, 2500);
+});
+
+</script>
+</body>
+</html>
+
