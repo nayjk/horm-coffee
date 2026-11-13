@@ -8,5 +8,4 @@ HORM — это особенное место, где встречаются у�
 
 **HORM — место, где каждый глоток становится маленькой историей, а каждый визит — тёплым воспоминанием.**
 
-**Функциональные требования:**
-1. 
+Для просмотра [https://htmlpreview.github.io/](https://htmlpreview.github.io/?https://github.com/nayjk/horm-coffee/blob/main/index.html)
