@@ -9,3 +9,7 @@ HORM — это особенное место, где встречаются у�
 **HORM — место, где каждый глоток становится маленькой историей, а каждый визит — тёплым воспоминанием.**
 
 Для просмотра [https://htmlpreview.github.io/](https://htmlpreview.github.io/?https://github.com/nayjk/horm-coffee/blob/main/index.html)
+
+<img width="1881" height="944" alt="image" src="https://github.com/user-attachments/assets/4d92dce1-8158-4a6f-9915-797c8664423f" />
+<img width="1884" height="947" alt="image" src="https://github.com/user-attachments/assets/50f79212-52ea-48ae-95b5-fd901ff50926" />
+
